@@ -1,0 +1,53 @@
+.cards__item
+  margin-bottom: 32px
+  padding: 24px
+  border-radius: 3px
+  &:last-child
+    margin-bottom: 0
+
+.cards__item--jewerly
+  border: 1px solid #74D0F5
+  background-color: #EEFDFF
+  .cards__item-title
+    &:before
+      content: ''
+      min-width: 32px
+      height: 32px
+      margin-right: 12px
+      background: url('images/svg/icon_jewelry.svg') center no-repeat
+
+.cards__item--dining
+  border: 1px solid alpha(#30B24B, 0.5)
+  background-color: #EFFFEE
+  .cards__item-title
+    &:before
+      content: ''
+      min-width: 32px
+      height: 32px
+      margin-right: 12px
+      background: url('images/svg/icon_dining.svg') center no-repeat
+
+.cards__item--flowers
+  border: 1px solid #FFC4CC
+  background-color: #FFEEF1
+  .cards__item-title
+    &:before
+      content: ''
+      min-width: 32px
+      height: 32px
+      margin-right: 12px
+      background: url('images/svg/icon_flowers.svg') center no-repeat
+
+.cards__item-title
+  display: flex
+  align-items: center
+  font-size: 18px
+  line-height: 26px
+  font-weight: 600
+  margin-bottom: 20px
+
+.cards__item-text
+  @extend .main-text
+  margin-bottom: 24px
+  &:last-child
+    margin-bottom: 0

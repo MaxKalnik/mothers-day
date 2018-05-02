@@ -1,0 +1,38 @@
+include ./svg-mixins
+
+.frame-wrapper
+  iframe(src='https://www.rewardexpert.com/shared/mothers-day/' width = "700px", height = '10562px', frameborder="0", scrolling = "no")
+
+.frame__user-block
+  .frame__btn-wrapper.frame__btn-wrapper--share
+    button.frame__btn.frame__btn--share
+      span.frame__btn-text
+        | Share
+
+      +share_svg
+
+    .frame__btn-container.frame__btn-container--share
+      .frame__btn-socials
+        a.frame__btn-socials-item.frame__btn-socials-item--fb(href="")
+          img.socials-logo(src="images/svg/fb-share.svg")
+
+        a.frame__btn-socials-item.frame__btn-socials-item--tw(href="")
+          img.socials-logo(src="images/svg/tw-share.svg")
+
+        a.frame__btn-socials-item.frame__btn-socials-item--go(href="")
+          img.socials-logo(src="images/svg/go-share.svg")
+
+  .frame__btn-wrapper.frame__btn-wrapper--embed
+    button.frame__btn.frame__btn--embed
+      span.frame__btn-text
+        | Embed
+
+      +embed_svg
+
+    .frame__btn-container.frame__btn-container--embed
+      .frame__btn-embed
+        textarea.frame__btn-embed-text#copyTarget(autofocus='', readonly='')
+          | <iframe src="https://www.rewardexpert.com/shared/mothers-day/" width="700px" height="10562px" frameborder="0" scrolling="no"></iframe><div style="width:100%;text-align:right;font-size:14px;color:#0a0c0d;margin-bottom:16px;">Source: <a style="color:#2093cd;" href="https://www.rewardexpert.com/blog/studies/which-u-s-states-are-home-to-the-grumpiest-and-happiest-travelers/">RewardExpert Blog</a></div>
+
+        button.frame__btn-embed-copy#copyButton
+          | copy to clipboard
