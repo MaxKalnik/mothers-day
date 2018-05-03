@@ -5,6 +5,10 @@
   &:last-child
     margin-bottom: 0
 
+  +respond-to($xsmall)
+    padding: 24px 12px
+    border-radius: 0
+
 .cards__item--jewerly
   border: 1px solid #74D0F5
   background-color: #EEFDFF
@@ -45,6 +49,12 @@
   line-height: 26px
   font-weight: 600
   margin-bottom: 20px
+
+  +respond-to($xsmall)
+    align-items: flex-start
+    &:before
+      position: relative
+      top: 3px
 
 .cards__item-text
   @extend .main-text
