@@ -238,14 +238,14 @@ userBlock(primaryColor)
     padding: 8px 14px 8px 14px
     outline: none
     border: none
-    background-color: saturate(primaryColor, 55%)
+    background-color: #D24864
     border-radius: 3px
     cursor: pointer
     margin: 0 auto
     &:hover
-      background-color: saturate(primaryColor, 80%)
+      background-color: alpha(#D24864, 0.9)
     &:active
-      background-color: saturate(primaryColor, 80%)
+      background-color: alpha(#D24864, 0.9)
 
     +respond-to($xsmall)
       font-size: 10px
