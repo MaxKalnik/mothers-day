@@ -32,4 +32,19 @@ $(document).ready(function () {
     $(window).on('resize', function () {
         topMenu();
     });
+    body.on('focus', '#copyTarget', function(event){
+        $(this).select();
+    });
+
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+    };
+
+    body.on('click', '#copyButton', function() {
+        copyToClipboard($('#copyTarget'));
+    });
 });
